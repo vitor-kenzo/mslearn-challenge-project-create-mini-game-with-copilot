@@ -13,6 +13,17 @@
 import random
 
 class RockPaperScissors:
+    """
+    A class representing a Rock, Paper, Scissors game.
+
+    Attributes:
+        player_score (int): The score of the player.
+        computer_score (int): The score of the computer.
+        choices (list): The available choices for the game.
+
+    Methods:
+        play(): Starts the game and allows the player to play against the computer.
+    """
 
     def __init__(self):
         self.player_score = 0
@@ -20,11 +31,12 @@ class RockPaperScissors:
         self.choices = ['rock', 'paper', 'scissors']
 
     def play(self):
+        """
+        Starts the Rock, Paper, Scissors game.
+
+        The player can play against the computer and track the score.
+        """
         while True:
-            # get player input, validating as follows:
-            # - if the input is not one of the choices, ask again
-            # - if the input is upper case of one of the choices, convert it to lower case and continue
-            # - if the input is one of the choices, continue
             while True:
                 player_choice = input('Choose rock, paper or scissors: ').lower()
                 if player_choice in self.choices:
